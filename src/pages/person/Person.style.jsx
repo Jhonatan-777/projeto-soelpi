@@ -20,8 +20,8 @@ export const ContainerTitle = styled.div`
   width: 100%;
   align-items: center;
   gap: 20px;
-  margin-top: 80px;
-  margin-bottom: 120px;
+  margin-top: 60px;
+  margin-bottom: 80px;
   
   & .title{
     text-transform: capitalize;
@@ -38,7 +38,6 @@ export const ContainerTitle = styled.div`
 `
 export const ContainerPersonDesc = styled.div`
   width: 100%;
-  height: 870px;
   display: flex;
   
   & .container-box{
@@ -64,13 +63,13 @@ export const ContainerPersonDesc = styled.div`
     
     & .container-img-princ{
       position: absolute;
-      width: 600px;
-      top: -60px;
-      right: 0;
+      top: -30px;
+      right: 5%;
       
       & .img-princ{
-        width: 550px;
-        height: 800px;
+        width: 400px;
+        height: 600px;
+        box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5);
         
         & img {
           width: 100%;
@@ -98,46 +97,50 @@ export const BoxLeft = styled.div`
   & .title-box-person{
     border-top-right-radius: 55px;
     background: linear-gradient(to right, rgba(19, 80, 145, 0.5), rgba(84, 156, 233, 0.3));
-    padding: 40px 40px;
+    padding: 20px 40px;
     
     & .title-name-person{
       font-family: ${({ theme }) => theme.family.messi};
       font-weight: ${({ theme }) => theme.weight.regular};
-      font-size: ${({ theme }) => theme.sizes.xxl};
+      font-size: ${({ theme }) => theme.sizes.xl};
       color: ${({ theme }) => theme.colors.white};
-      line-height: 58px;
-      margin-bottom: 5px;
+      line-height: 1.5;
     }
     & .subtitle-name-person{
-      font-family: ${({ theme }) => theme.family.robo};
-      font-weight: ${({ theme }) => theme.weight.regular};
+      font-family: ${({ theme }) => theme.family.pop};
+      font-weight: ${({ theme }) => theme.weight.light};
       font-size: ${({ theme }) => theme.sizes.m};
       color: ${({ theme }) => theme.colors.white};
     }
   }
   & .desc-box-person{
-    padding: 40px 40px;
+    padding: 20px 40px;
     
     & h3{
       font-family: ${({ theme }) => theme.family.messi};
       font-weight: ${({ theme }) => theme.weight.medium};
-      font-size: ${({ theme }) => theme.sizes.l};
+      font-size: ${({ theme }) => theme.sizes.m};
       color: ${({ theme }) => theme.colors.textColorLight};
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     & .desc-person{
       position: relative;
       background: rgba(2, 35, 53, 0.377);
-      padding: 30px;
+      overflow-y: scroll;
+      scrollbar-color: #393b44 #cfcfcf5e;
+      scrollbar-width: thin;
+      height: 180px;
+      padding: 20px;
       max-width: 55%;
       min-width: 550px;
       z-index: 100;
       
       & p{
-        width: 48ch;
+        width: 60ch;
         font-family: ${({ theme }) => theme.family.robo};
         font-weight: ${({ theme }) => theme.weight.regular};
-        font-size: ${({ theme }) => theme.sizes.m};
+        font-size: ${({ theme }) => theme.sizes.xs};
+        line-height: 1.5;
         color: ${({ theme }) => theme.colors.white};
         letter-spacing: .11rem;
       }
@@ -145,13 +148,12 @@ export const BoxLeft = styled.div`
   }
   
   & .container-img-left{
-    padding: 40px 40px;
-    max-width: 550px;
+    padding: 10px 40px 30px 40px;
+    max-width: 500px;
     display: flex;
-    justify-content: space-between;
-    
-    
-    
+    gap: 30px;
+    /* justify-content: space-between; */
+
     & .img-left{
       cursor: pointer;
       position: relative;
@@ -159,13 +161,13 @@ export const BoxLeft = styled.div`
       align-items: center;
       justify-content: center;
       background-color: aliceblue;
-      width: 200px;
-      height: 230px;
+      width: 150px;
+      height: 200px;
       overflow: hidden;
       
       & img{
-        width: 220px;
-        height: 250px;
+        width: 200px;
+        height: 220px;
       }
       
       & .desc-name-img{
@@ -180,7 +182,7 @@ export const BoxLeft = styled.div`
           text-align: center;
           font-family: ${({ theme }) => theme.family.pop};
           font-weight: ${({ theme }) => theme.weight.medium};
-          font-size: ${({ theme }) => theme.sizes.l};
+          font-size: ${({ theme }) => theme.sizes.m};
           color: ${({ theme }) => theme.colors.white};
           letter-spacing: .13rem;
           transition: all .2s;
